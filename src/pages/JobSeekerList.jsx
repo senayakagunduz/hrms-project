@@ -9,7 +9,7 @@ export default function JobSeekerList() {
     let jobSeekerService=new JobSeekerService();
     jobSeekerService
         .getJobSeekers()
-        .then((result)=>setJobSeekers(result.data.data));
+        .then((result) => setJobSeekers(result.data.data));
 
    }, []);
   return (
@@ -27,10 +27,10 @@ export default function JobSeekerList() {
         {
           jobSeekers.map((jobSeeker)=>(
             <Table.Row key={jobSeeker.id}>
-            <Table.Cell>jobSeeker.email</Table.Cell>
-            <Table.Cell>jobSeeker.firstName</Table.Cell>
-            <Table.Cell>jobSeeker.lastName</Table.Cell>
-            <Table.Cell>jobSeeker.birthOfYear</Table.Cell>
+            <Table.Cell>{jobSeeker.email}</Table.Cell>
+            <Table.Cell>{jobSeeker.firstName}</Table.Cell>
+            <Table.Cell>{jobSeeker.lastName}</Table.Cell>
+            <Table.Cell>{jobSeeker.birthOfYear}</Table.Cell>
           </Table.Row>
           ))}
 
